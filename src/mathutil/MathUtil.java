@@ -26,7 +26,7 @@ public class MathUtil {
         System.out.println("0! = " + computeFactorial(0));
         
         //expected Exception nếu -5!
-        
+//        System.out.println("-5! = " + computeFactorial(-5));
         
         System.out.println("16! = " + computeFactorial(16));
     }
