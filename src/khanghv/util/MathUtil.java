@@ -14,13 +14,11 @@ public class MathUtil {
     //tính n gia thừa: 1*  2 * 3 * 4 .... --> tràn miền Integer (2tỷ 1)---> xài long ---> xài từ 15 trở lại
 
     public static long computeFactorial(int n) {
-        if(n < 0 || n > 15)
-            throw new IllegalArgumentException("Can not calculate the negative number. n must be >= 0");
-        long result = 1;
-        for (int i = 1; i <= n; i++) {
-            result *= i;
+        if (n == 0 || n == 1) {
+            return 1; //điều kiện dừng nhen
         }
-        return result;
+        //sống sót tới đây thì n trong vùng từ 2 - 15 ---> ko cần else
+        return n * computeFactorial(n - 1);
     }
 
 }
